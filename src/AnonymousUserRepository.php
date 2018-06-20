@@ -41,7 +41,7 @@ class AnonymousUserRepository implements UserRepositoryInterface {
             return;
         }
 
-        if (method_exists($model, 'isAnonymousAllowed') && !$model->isAnonymousAllowed()) {
+        if (method_exists($model, 'isAnonymousAllowed') && !$user->isAnonymousAllowed()) {
             return;
         }
         
